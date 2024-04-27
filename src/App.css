@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-bottom: 20px; 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+td {
+  border: 1px solid #ddd; 
+  padding: 8px; 
+  text-align: center; 
+}
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd; 
+  padding: 8px; 
+  text-align: center;
+}
+.search-container {
+  width: 100%; /* Set width to 100% to fill its container */
+  margin-bottom: 20px; /* Add space below the search field */
 }
