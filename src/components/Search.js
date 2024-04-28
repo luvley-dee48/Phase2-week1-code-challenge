@@ -15,12 +15,13 @@ const SearchField = ({ searchTitle }) => {
         value={searchQuery}
         onChange={handleSearch}
         style={{
-          width: "95%",
-          padding: "10px",
+          width: "98%",
+          padding: "10px 40px 10px 10px",
           border: "1px solid #ccc",
-          borderRadius: "20px",
+          borderRadius: "0px",
           boxSizing: "border-box",
-          fontSize: "16px",
+          fontSize: "14px",
+          marginTop:"5px",
         }}
       />
     </div>

@@ -5,7 +5,9 @@ import TransactionForm from "./components/TransactionForm";
 import SearchField from "./components/Search";
 import DisplayTitle from "./components/Title";
 
+// app component
 function App() {
+  // this is a variable containing all the array of the objects
   const [transactions, setTransactions] = useState([
     {
       date: "2019-12-01",
@@ -45,20 +47,25 @@ function App() {
     },
   ]);
 
+  // a function to add a new transaction
   const addTransaction = (newTransaction) => {
+    // after adding we are supposed to update the new transaction to the array
     setTransactions([...transactions, newTransaction]);
   };
 
+  //another function to filter based on the searched query
   const searchDirect = (searchQuery) => {
+    //filtering the transactions
     const filteredTransactions = transactions.filter((transaction) => {
       return transaction.description
         .toLowerCase()
         .includes(searchQuery.toLowerCase());
     });
-
+    // for updating the state that have the filtered transactions
     setTransactions(filteredTransactions);
   };
   return (
+    // rendering the diffrent components
     <div>
       <DisplayTitle />
 

@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-
+import "../App.css";
 const TransactionForm = ({ onSubmit }) => {
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState("");
@@ -24,14 +23,28 @@ const TransactionForm = ({ onSubmit }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} style={{ display: "flex", gap: "40px" }}>
+    <div  className="input-container">
+      <form 
+        onSubmit={handleSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "30px",
+          alignItems: "center",
+          width: "550",
+        }}
+      >
         <label>Date</label>
         <input
           type="date"
           value={date}
           onChange={(event) => setDate(event.target.value)}
-          style={{ padding: "5px", border: "2px solid #ccc" }}
+          style={{
+            padding: "10px",
+            border: "2px solid #ccc",
+            marginRight: "10px",
+            width: "300px",
+          }}
         />
 
         <input
@@ -39,7 +52,12 @@ const TransactionForm = ({ onSubmit }) => {
           placeholder="Description"
           value={description}
           onChange={(event) => setDescription(event.target.value)}
-          style={{ padding: "10px", border: "2px solid #ccc" }}
+          style={{
+            padding: "10px",
+            border: "2px solid #ccc",
+            marginBottom: "10px",
+            width: "300px",
+          }}
         />
 
         <input
@@ -47,7 +65,12 @@ const TransactionForm = ({ onSubmit }) => {
           placeholder="Category"
           value={category}
           onChange={(event) => setCategory(event.target.value)}
-          style={{ padding: "10px", border: "2px solid #ccc" }}
+          style={{
+            padding: "10px",
+            border: "2px solid #ccc",
+            marginBottom: "10px",
+            width: "300px",
+          }}
         />
 
         <input
@@ -55,13 +78,27 @@ const TransactionForm = ({ onSubmit }) => {
           placeholder="Amount"
           value={amount}
           onChange={(event) => setAmount(event.target.value)}
-          style={{ padding: "10px", border: "2px solid #ccc" }}
+          style={{
+            padding: "10px",
+            border: "2px solid #ccc",
+            marginBottom: "10px",
+            width: "250px",
+          }}
         />
-
-        <button type="submit" style={{ padding: "20px" }}>
-          Add Transaction
-        </button>
       </form>
+      <button
+        type="submit"
+        onClick={handleSubmit}
+        style={{
+          padding: "3px 15px",
+          marginBottom: "10px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+        }}
+      >
+        Add Transaction
+      </button>
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import { getByTitle } from "@testing-library/react";
+// import { getByTitle } from "@testing-library/react";
 import React from "react";
 
 const DisplayTitle=()=> {
     return (
-        <div style={{textAlign:"center",  padding: "20px" }}>
+        <div style={{textAlign:"center", backgroundColor:"#370080",  padding: "20px" }}>
             <h1>The Royal Bank of Flatiron</h1>
         </div>
     )

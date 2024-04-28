@@ -55,3 +55,19 @@ th {
   width: 100%; /* Set width to 100% to fill its container */
   margin-bottom: 20px; /* Add space below the search field */
 }
+.input-container {
+  background-color: #f2f2f2; 
+  padding: 10px; 
+  border-radius: 5px; 
+  margin-bottom: 10px; 
+  margin-top: 5px;
+  width: 1395px;
+  height: 90px;
+  border: 5px ;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
